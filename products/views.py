@@ -34,8 +34,6 @@ def dump_model(request):
 
     model = DecisionTreeClassifier()
     model.fit(x_train, y_train)
-    # model.fit(x,y)
-    # graph and the features
     tree.export_graphviz(model, out_file='music-recomender.dot',
                          feature_names=['age', 'gender']
                          , class_names=sorted(y.unique()),
